@@ -1,0 +1,25 @@
+{
+  "name": "shopify-headless-wordpress-store",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Headless ecommerce storefront with Shopify, Next.js, WordPress blog integration, and webhook automation.",
+  "workspaces": [
+    "apps/*",
+    "themes/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.6",
+    "prettier": "^3.3.3",
+    "eslint": "^9.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

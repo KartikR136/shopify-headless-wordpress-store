@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.hero-banner {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
+
+.hero-banner p {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.hero-banner a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #111111;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  border: 1px solid #ececec;
+  padding: 16px;
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+}
+
+.product-card.hovered {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.price {
+  display: block;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #111111;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 420px;
+  height: 100vh;
+  background: white;
+  border-left: 1px solid #e5e5e5;
+  padding: 20px;
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.newsletter {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 300px;
+}
+
+.newsletter button {
+  padding: 12px 18px;
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-banner h1 {
+    font-size: 36px;
+  }
+
+  .cart-drawer {
+    width: 100%;
+  }
+}

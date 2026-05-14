@@ -1,0 +1,51 @@
+<section class="product-page">
+  <div class="container">
+    <div class="product-layout">
+      <div class="gallery">
+        <img
+          class="product-main-image"
+          src="{{ product.featured_image | image_url: width: 900 }}"
+          alt="{{ product.title }}"
+        >
+
+        <div class="thumbnails">
+          {% for image in product.images %}
+            <img
+              class="product-thumbnail"
+              data-image="{{ image | image_url: width: 900 }}"
+              src="{{ image | image_url: width: 150 }}"
+              alt="{{ product.title }}"
+            >
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1>{{ product.title }}</h1>
+
+        <div data-product-price>
+          {{ product.price | money }}
+        </div>
+
+        <select data-variant-select>
+          {% for variant in product.variants %}
+            <option value="{{ variant.id }}">
+              {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+
+        <button
+          class="add-to-cart-btn"
+          data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+        >
+          Add to Cart
+        </button>
+
+        <div class="product-description">
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

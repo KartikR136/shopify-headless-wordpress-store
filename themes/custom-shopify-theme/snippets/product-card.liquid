@@ -1,0 +1,19 @@
+<div class="product-card">
+  <a href="{{ product.url }}">
+    <img
+      src="{{ product.featured_image | image_url: width: 600 }}"
+      alt="{{ product.title }}"
+    >
+
+    <h3>{{ product.title }}</h3>
+
+    {% render 'price', product: product %}
+  </a>
+
+  <button
+    class="add-to-cart-btn"
+    data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+  >
+    Add to Cart
+  </button>
+</div>

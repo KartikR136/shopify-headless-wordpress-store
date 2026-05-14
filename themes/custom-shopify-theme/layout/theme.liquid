@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  {% render 'seo-meta' %}
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {{ content_for_header }}
+
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+  <script defer src="{{ 'theme.js' | asset_url }}"></script>
+  <script defer src="{{ 'ajax-cart.js' | asset_url }}"></script>
+</head>
+<body>
+  {% section 'hero-banner' %}
+
+  {% render 'cart-drawer' %}
+
+  <main role="main">
+    {{ content_for_layout }}
+  </main>
+
+  {% section 'newsletter-signup' %}
+</body>
+</html>

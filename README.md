@@ -2,7 +2,7 @@
 
 A production-style headless commerce architecture combining Shopify storefront capabilities with a decoupled Next.js frontend, WordPress content publishing, and webhook-driven backend automation.
 
-![Architecture](./docs/screenshots/homepage.png)
+
 ![CI](https://img.shields.io/badge/CI-passing-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-14-black)
 ![Shopify](https://img.shields.io/badge/Shopify-Headless-success)
